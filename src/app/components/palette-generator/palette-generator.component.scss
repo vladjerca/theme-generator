@@ -1,0 +1,43 @@
+@import "~awesome-sass-easing/sass-easing";
+
+$palette-variant-side: 45px;
+$space-increment: 5px;
+
+:host {
+  display: flex;
+  margin: $space-increment 0;
+
+  .palette-color {
+    &-container {
+      margin: 0 1px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      text-align: center;
+    }
+
+    width: $palette-variant-side;
+    height: $palette-variant-side;
+    border-radius: 0;
+
+    cursor: pointer;
+
+    transition: border-radius 400ms $easeInOutExpo;
+
+    &:hover,
+    &-picker {
+      border-radius: 50%;
+    }
+
+    &-picker {
+      border: 2px solid #333333;
+      box-sizing: border-box;
+    }
+  }
+}

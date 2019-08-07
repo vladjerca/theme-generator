@@ -1,0 +1,22 @@
+<ng-container *ngFor="let variant of palette">
+    <div class="palette-color-container mat-typography">
+        <div [style.background-color]="variant.hex"
+             [matTooltip]="variant.hex"
+             matTooltipPosition="above"
+             class="palette-color">
+        </div>
+        <p>{{ variant.intensity }}</p>
+    </div>
+</ng-container>
+<div class="palette-color-container mat-typography"
+     style="margin-left: 10px">
+    <div [style.background-color]="color?.hex"
+         [colorPicker]="color?.hex"
+         [cpPosition]="'bottom'"
+         [cpPositionOffset]="'50%'"
+         [cpPositionRelativeToArrow]="true"
+         (colorPickerChange)="switchColor($event)"
+         class="palette-color palette-color-picker">
+    </div>
+    <p>Color</p>
+</div>
