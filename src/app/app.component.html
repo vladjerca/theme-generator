@@ -1,1 +1,47 @@
 <mat-toolbar color="primary">Theme Generator</mat-toolbar>
+
+<div class="app-theme-container">
+    <mat-card>
+        <mat-card-title>
+            Application Colors
+        </mat-card-title>
+        <mat-card-content>
+            <label for="primary">Primary</label>
+            <app-palette-generator id="primary"
+                                   default="#2196f3">
+            </app-palette-generator>
+
+            <label for="secondary">Secondary</label>
+            <app-palette-generator id="secondary"
+                                   default="#81d4fa">
+            </app-palette-generator>
+
+            <label for="warn">Warn</label>
+            <app-palette-generator id="warn"
+                                   default="#f44336">
+            </app-palette-generator>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title>
+            Status Colors
+        </mat-card-title>
+        <mat-card-content>
+            <label for="success">Success</label>
+            <app-palette-generator id="success"
+                                   default="#8bc34a">
+            </app-palette-generator>
+
+            <label for="warning">Warning</label>
+            <app-palette-generator id="warning"
+                                   default="#ffc107">
+            </app-palette-generator>
+
+            <label for="error">Error</label>
+            <app-palette-generator id="error"
+                                   default="#f44336">
+            </app-palette-generator>
+        </mat-card-content>
+    </mat-card>
+</div>

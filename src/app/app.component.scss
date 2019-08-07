@@ -1,0 +1,8 @@
+.app-theme-container {
+  display: flex;
+  flex-flow: wrap;
+
+  .mat-card {
+    margin: 20px;
+  }
+}
