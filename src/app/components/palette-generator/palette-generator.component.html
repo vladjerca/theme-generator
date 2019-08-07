@@ -1,9 +1,11 @@
 <ng-container *ngFor="let variant of palette">
     <div class="palette-color-container mat-typography">
         <div [style.background-color]="variant.hex"
-             [matTooltip]="variant.hex"
+             [matTooltip]="variant.info"
+             matTooltipClass="pre-tooltip text-center"
              matTooltipPosition="above"
              class="palette-color">
+            <p [style.color]="variant.contrast.hex">Text</p>
         </div>
         <p>{{ variant.intensity }}</p>
     </div>

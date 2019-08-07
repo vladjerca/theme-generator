@@ -8,6 +8,16 @@ $space-increment: 5px;
   margin: $space-increment 0;
 
   .palette-color {
+    display: flex;
+    text-align: center;
+    align-items: flex-end;
+    justify-content: center;
+    width: $palette-variant-side;
+    height: $palette-variant-side;
+    border-radius: 0;
+    cursor: pointer;
+    transition: border-radius 400ms $easeInOutExpo;
+
     &-container {
       margin: 0 1px;
 
@@ -21,14 +31,6 @@ $space-increment: 5px;
 
       text-align: center;
     }
-
-    width: $palette-variant-side;
-    height: $palette-variant-side;
-    border-radius: 0;
-
-    cursor: pointer;
-
-    transition: border-radius 400ms $easeInOutExpo;
 
     &:hover,
     &-picker {
