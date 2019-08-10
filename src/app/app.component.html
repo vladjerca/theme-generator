@@ -13,13 +13,13 @@
             <mat-card-content>
                 <label for="primary">Primary</label>
                 <app-palette-generator id="primary"
-                                       default="#1c73ad"
+                                       default="#2f70c5"
                                        (paletteChange)="appColorTheme.primary.next($event)">
                 </app-palette-generator>
 
                 <label for="secondary">Secondary</label>
                 <app-palette-generator id="secondary"
-                                       default="#5a3bb8"
+                                       default="#765ec0"
                                        (paletteChange)="appColorTheme.secondary.next($event)">
                 </app-palette-generator>
 
@@ -61,6 +61,9 @@
             </mat-tab>
             <mat-tab label="Badge">
                 <app-badge-demo></app-badge-demo>
+            </mat-tab>
+            <mat-tab label="Progress Spinner">
+                <app-spinner-demo></app-spinner-demo>
             </mat-tab>
         </mat-tab-group>
     </mat-card>

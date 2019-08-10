@@ -10,6 +10,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { APP_INITIALIZER_PROVIDER } from './app.initializer';
 import { AppButtonDemoModule } from './demos/app-button-demo/app-button-demo.module';
 import { AppBadgeDemoModule } from './demos/app-badge-demo/app-badge-demo.module';
+import { AppSpinnerDemoModule } from './demos/app-spinner-demo/app-spinner-demo.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AppBadgeDemoModule } from './demos/app-badge-demo/app-badge-demo.module
     MatTabsModule,
     AppButtonDemoModule,
     AppBadgeDemoModule,
+    AppSpinnerDemoModule,
   ],
   providers: [
     APP_INITIALIZER_PROVIDER,
