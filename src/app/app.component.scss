@@ -29,8 +29,10 @@ app-root {
   }
 
   .app-theme-container {
-    display: flex;
-    flex-flow: wrap;
+    .app-theme-color-definition-container {
+      display: flex;
+      flex-flow: wrap;
+    }
 
     .mat-card {
       margin: 20px;

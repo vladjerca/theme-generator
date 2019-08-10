@@ -12,17 +12,20 @@
         <mat-card-content>
             <label for="primary">Primary</label>
             <app-palette-generator id="primary"
-                                   default="#2196f3">
+                                   default="#1c73ad"
+                                   (paletteChange)="appColorTheme.primary.next($event)">
             </app-palette-generator>
 
             <label for="secondary">Secondary</label>
             <app-palette-generator id="secondary"
-                                   default="#81d4fa">
+                                   default="#5a3bb8"
+                                   (paletteChange)="appColorTheme.secondary.next($event)">
             </app-palette-generator>
 
             <label for="warn">Warn</label>
             <app-palette-generator id="warn"
-                                   default="#f44336">
+                                   default="#c43b31"
+                                   (paletteChange)="appColorTheme.warn.next($event)">
             </app-palette-generator>
         </mat-card-content>
     </mat-card>
@@ -34,17 +37,17 @@
         <mat-card-content>
             <label for="success">Success</label>
             <app-palette-generator id="success"
-                                   default="#8bc34a">
+                                   default="#8bb956">
             </app-palette-generator>
 
             <label for="warning">Warning</label>
             <app-palette-generator id="warning"
-                                   default="#ffc107">
+                                   default="#f9a92b">
             </app-palette-generator>
 
             <label for="error">Error</label>
             <app-palette-generator id="error"
-                                   default="#f44336">
+                                   default="#c43b31">
             </app-palette-generator>
         </mat-card-content>
     </mat-card>

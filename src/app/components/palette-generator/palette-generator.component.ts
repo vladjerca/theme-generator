@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { PaletteColor, EnhancedMaterialPaletteColor } from 'src/app/models';
+import { Component, ChangeDetectionStrategy, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { PaletteColor, EnhancedMaterialPaletteColor, Palette } from 'src/app/models';
 
 @Component({
   selector: 'app-palette-generator',
@@ -9,14 +9,17 @@ import { PaletteColor, EnhancedMaterialPaletteColor } from 'src/app/models';
 })
 export class PaletteGeneratorComponent implements OnInit {
   @Input()
-  public label: string;
+  public id: string;
 
   @Input()
   public default: string;
 
+  @Output()
+  public paletteChange = new EventEmitter<Palette>();
+
   public color: PaletteColor;
 
-  public palette: PaletteColor[];
+  public palette: Palette;
 
   ngOnInit() {
     this._initialize(this.default);
@@ -30,6 +33,7 @@ export class PaletteGeneratorComponent implements OnInit {
 
   private _initialize(hex: string) {
     this.color = new EnhancedMaterialPaletteColor(hex);
-    this.palette = this.color.palette;
+    this.palette = new Palette(this.color.palette);
+    this.paletteChange.emit(this.palette);
   }
 }

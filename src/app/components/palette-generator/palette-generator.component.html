@@ -1,4 +1,4 @@
-<ng-container *ngFor="let variant of palette">
+<ng-container *ngFor="let variant of palette.variants">
     <div class="palette-color-container mat-typography">
         <div [style.background-color]="variant.hex"
              [matTooltip]="variant.info"
