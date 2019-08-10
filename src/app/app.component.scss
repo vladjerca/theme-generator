@@ -1,8 +1,39 @@
-.app-theme-container {
-  display: flex;
-  flex-flow: wrap;
+app-root {
+  &.app-theme-loading {
+    pointer-events: none;
 
-  .mat-card {
-    margin: 20px;
+    .app-theme-container,
+    .mat-toolbar {
+      opacity: 0.1;
+    }
+
+    .loading-message {
+      display: inline-block;
+    }
+  }
+
+  .loading-message {
+    z-index: 1;
+    top: 50%;
+    width: 100%;
+    font-size: 3em;
+    position: absolute;
+    text-align: center;
+    display: none;
+  }
+
+  .app-theme-container,
+  .mat-toolbar {
+    transition: opacity 250ms ease-in-out;
+    opacity: 1;
+  }
+
+  .app-theme-container {
+    display: flex;
+    flex-flow: wrap;
+
+    .mat-card {
+      margin: 20px;
+    }
   }
 }

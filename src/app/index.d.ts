@@ -9,35 +9,35 @@ interface ISassOptions {
     // Path to source map file
     // Enables the source map generating
     // Used to create sourceMappingUrl
-    sourceMapFile: string;
+    sourceMapFile?: string;
     // Pass-through as sourceRoot property
-    sourceMapRoot: string;
+    sourceMapRoot?: string;
     // The input path is used for source map generation.
     // It can be used to define something with string
     // compilation or to overload the input file path.
     // It is set to "stdin" for data contexts
     // and to the input file on file contexts.
-    inputPath: string;
+    inputPath?: string;
     // The output path is used for source map generation.
     // Libsass will not write to this file; it is just
     // used to create information in source-maps etc.
-    outputPath: string;
+    outputPath?: string;
     // Embed included contents in maps
-    sourceMapContents: boolean;
+    sourceMapContents?: boolean;
     // Embed sourceMappingUrl as data uri
-    sourceMapEmbed: boolean;
+    sourceMapEmbed?: boolean;
     // Disable sourceMappingUrl in css output
-    sourceMapOmitUrl: boolean;
-    style: SassStyle;
+    sourceMapOmitUrl?: boolean;
+    style?: SassStyle;
     // Decimal point precision for outputting fractional numbers
     // (-1 will use the libsass default; which currently is 5)
-    precision: number;
+    precision?: number;
     // If you want inline source comments
-    comments: false;
+    comments?: boolean;
     // String to be used for indentation
-    indent: string;
+    indent?: string;
     // String to be used to for line feeds
-    linefeed: string;
+    linefeed?: string;
 }
 
 interface SassCompileResult {
@@ -58,7 +58,7 @@ interface SassMap {
 }
 
 declare class Sass {
-    static style: SassStyle;
+    static style: typeof SassStyle;
     static setWorkerUrl(workerPath: string);
 
     constructor(workerPath?: string);
