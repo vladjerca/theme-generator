@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { APP_INITIALIZER_PROVIDER } from './app.initializer';
 import { AppButtonDemoModule } from './demos/app-button-demo/app-button-demo.module';
+import { AppBadgeDemoModule } from './demos/app-badge-demo/app-badge-demo.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppButtonDemoModule } from './demos/app-button-demo/app-button-demo.mod
     MatCardModule,
     MatTabsModule,
     AppButtonDemoModule,
+    AppBadgeDemoModule,
   ],
   providers: [
     APP_INITIALIZER_PROVIDER,
