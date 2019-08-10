@@ -5,50 +5,60 @@
 <mat-toolbar color="primary">Theme Generator</mat-toolbar>
 
 <div class="app-theme-container">
+    <div class="app-theme-color-definition-container">
+        <mat-card>
+            <mat-card-title>
+                Application Colors
+            </mat-card-title>
+            <mat-card-content>
+                <label for="primary">Primary</label>
+                <app-palette-generator id="primary"
+                                       default="#1c73ad"
+                                       (paletteChange)="appColorTheme.primary.next($event)">
+                </app-palette-generator>
+
+                <label for="secondary">Secondary</label>
+                <app-palette-generator id="secondary"
+                                       default="#5a3bb8"
+                                       (paletteChange)="appColorTheme.secondary.next($event)">
+                </app-palette-generator>
+
+                <label for="warn">Warn</label>
+                <app-palette-generator id="warn"
+                                       default="#c43b31"
+                                       (paletteChange)="appColorTheme.warn.next($event)">
+                </app-palette-generator>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>
+                Status Colors
+            </mat-card-title>
+            <mat-card-content>
+                <label for="success">Success</label>
+                <app-palette-generator id="success"
+                                       default="#8bb956">
+                </app-palette-generator>
+
+                <label for="warning">Warning</label>
+                <app-palette-generator id="warning"
+                                       default="#f9a92b">
+                </app-palette-generator>
+
+                <label for="error">Error</label>
+                <app-palette-generator id="error"
+                                       default="#c43b31">
+                </app-palette-generator>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
     <mat-card>
-        <mat-card-title>
-            Application Colors
-        </mat-card-title>
-        <mat-card-content>
-            <label for="primary">Primary</label>
-            <app-palette-generator id="primary"
-                                   default="#1c73ad"
-                                   (paletteChange)="appColorTheme.primary.next($event)">
-            </app-palette-generator>
-
-            <label for="secondary">Secondary</label>
-            <app-palette-generator id="secondary"
-                                   default="#5a3bb8"
-                                   (paletteChange)="appColorTheme.secondary.next($event)">
-            </app-palette-generator>
-
-            <label for="warn">Warn</label>
-            <app-palette-generator id="warn"
-                                   default="#c43b31"
-                                   (paletteChange)="appColorTheme.warn.next($event)">
-            </app-palette-generator>
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-title>
-            Status Colors
-        </mat-card-title>
-        <mat-card-content>
-            <label for="success">Success</label>
-            <app-palette-generator id="success"
-                                   default="#8bb956">
-            </app-palette-generator>
-
-            <label for="warning">Warning</label>
-            <app-palette-generator id="warning"
-                                   default="#f9a92b">
-            </app-palette-generator>
-
-            <label for="error">Error</label>
-            <app-palette-generator id="error"
-                                   default="#c43b31">
-            </app-palette-generator>
-        </mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="Buttons">
+                <app-button-demo></app-button-demo>
+            </mat-tab>
+        </mat-tab-group>
     </mat-card>
 </div>

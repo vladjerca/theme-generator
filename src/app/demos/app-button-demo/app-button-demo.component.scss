@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+
+  .app-button-container {
+    margin: 0 auto;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}

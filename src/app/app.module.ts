@@ -6,7 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PaletteGeneratorModule } from './components/palette-generator/palette-generator.module';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { APP_INITIALIZER_PROVIDER } from './app.initializer';
+import { AppButtonDemoModule } from './demos/app-button-demo/app-button-demo.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { APP_INITIALIZER_PROVIDER } from './app.initializer';
     MatToolbarModule,
     PaletteGeneratorModule,
     MatCardModule,
+    MatTabsModule,
+    AppButtonDemoModule,
   ],
   providers: [
     APP_INITIALIZER_PROVIDER,
