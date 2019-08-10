@@ -61,6 +61,8 @@ const paletteToScss = ({ primary, secondary, warn, }: IColorPalettes) => `
         ${objToScssMap({ '$primary-palette': primary.toMap() })};
         ${objToScssMap({ '$secondary-palette': secondary.toMap() })};
         ${objToScssMap({ '$warn-palette': warn.toMap() })};
+        
+        // TODO: enable FOREGROUND / BACKGROUND and LIGHT / DARK customization
 
         $theme-generator-theme: mat-light-theme(
             mat-palette($primary-palette),
@@ -69,6 +71,10 @@ const paletteToScss = ({ primary, secondary, warn, }: IColorPalettes) => `
         );
 
         @include angular-material-theme($theme-generator-theme);
+
+        body {
+            background: map-get(map-get($theme-generator-theme, 'background'), 'background');
+        }
 `;
 
 @Injectable({

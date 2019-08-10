@@ -6,6 +6,7 @@ $space-increment: 5px;
 :host {
   display: flex;
   margin: $space-increment 0;
+  justify-content: center;
 
   .palette-color {
     display: flex;
